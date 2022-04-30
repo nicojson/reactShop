@@ -3,7 +3,11 @@
 #actualice.
 name: Trigger Netlify Build
 
-on: [push]
+on:
+  schedule:
+  # You can use https;//crontab.guru to generate the
+  # desired cron scheduled :)
+    - cron: '10 4 * * 7' # At 04:10 on Sunday
 
 jobs:
   build:

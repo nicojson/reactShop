@@ -7,7 +7,7 @@ on:
   schedule:
   # You can use https;//crontab.guru to generate the
   # desired cron scheduled :)
-    - cron: '* 23 * * 5' # At 23:00 on Friday
+    - cron: '10 4 * * 6' # At 04:10 on Saturday
 
 jobs:
   build:

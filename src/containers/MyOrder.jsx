@@ -6,7 +6,8 @@ import '@styles/MyOrder.scss';
 import iconFlechita from '@icons/flechita.svg';
 
 const MyOrder = () => {
-  const { state } = useContext(AppContext);
+  const { state, toggleOrder } = useContext(AppContext);
+  
   const sumTotal = () => {
     const reducer = (acomulator, currentValue) => acomulator + currentValue.price;
     const sum = state.cart.reduce(reducer, 0);
@@ -16,7 +17,8 @@ const MyOrder = () => {
   return (
     <aside className="MyOrder">
       <div className="title-container">
-        <img src={iconFlechita} alt="flechita" />
+        <img src={iconFlechita} alt="flechita" 
+        onClick={() => toggleOrder()}/>
         <p className="title">My order</p>
       </div>
       <div className="my-order-content">

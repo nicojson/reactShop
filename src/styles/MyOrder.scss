@@ -4,13 +4,18 @@
     width: 360px;
     padding: 24px;
     box-sizing: border-box;
-    position: absolute;
+    position: fixed;
     right: 0;
     background-color: var(--withe);
     top: 60px;
-    bottom: auto;
+    bottom: 0px;
     border-radius: 6px;
     border: 1px solid var(--very-light-pink);
+	animation: swipeLeft .40s;
+    overflow: auto;
+}
+@keyframes swipeLeft {
+	100% {transform: translateX(-260px);}
 }
 .title-container {
     display: flex;

@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '@styles/MobileMenu.scss';
+import iconClose from "@icons/icon_close.png";
+import AppContext from '../context/AppContext';
 
 const MobileMenu = () => {
+  const { toggleMenuMobile } = useContext(AppContext);
+
   return (
     <div className="mobile-menu">
+      <img src={iconClose} alt="close"
+      onClick={() => toggleMenuMobile()} />
       <ul>
         <li>
           <a href="/">CATEGORIES</a>
@@ -35,7 +41,7 @@ const MobileMenu = () => {
           <a href="/">My accounts</a>
         </li>
       </ul>
-      <ul>
+      <ul className="MenuMobile-end">
         <li>
           <a href="/" className="email">
             juanperez@gmail.com

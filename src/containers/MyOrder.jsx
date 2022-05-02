@@ -17,7 +17,7 @@ const MyOrder = () => {
   return (
     <aside className="MyOrder">
       <div className="title-container">
-        <img src={iconFlechita} alt="flechita" 
+        <img className="flechita" src={iconFlechita} alt="flechita" 
         onClick={() => toggleOrder()}/>
         <p className="title">My order</p>
       </div>

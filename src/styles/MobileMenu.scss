@@ -1,11 +1,21 @@
 @import 'vars';
 
 .mobile-menu {
+    width: 80vw;
+    height: 90vh;
+    position: fixed;
+    background-color: var(--withe);
+    top: 61px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 24px;
     gap: 20px;
+}
+.mobile-menu img {
+    position: absolute;
+    right: 35px;
+    width: 24px;
+    height: 24px;
 }
 .mobile-menu a {
     text-decoration: none;
@@ -18,12 +28,11 @@
     margin: 24px 0 0;
     list-style: none;
 }
-.mobile-menu ul:nth-child(1) {
+.mobile-menu ul:nth-child(2) {
     border-bottom: 1px solid var(--very-light-pink);
 }
 .mobile-menu ul:nth-child(3) {
-    position: absolute;
-    bottom: 24px;
+    bottom: 40px;
 }
 .mobile-menu ul li {
     margin-bottom: 24px;
@@ -39,4 +48,8 @@
 .mobile-menu .sign-out {
     font-size: var(--sm);
     color: var(--hospital-green);
+}
+.MenuMobile-end {
+    position: fixed;
+    bottom: 24px;
 }
